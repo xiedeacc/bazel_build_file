@@ -209,6 +209,6 @@ cc_toolchain(
     toolchain_identifier = "windows_mingw_x86_64-toolchain",
 )
 
-load("@bazel_build_file_repo//toolchains:mingw.bzl", "cc_toolchain_config")
+load("@bazel_build_repo//toolchains:mingw.bzl", "cc_toolchain_config")
 
 cc_toolchain_config(name = "windows_mingw_x86_64_toolchain_config")

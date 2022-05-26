@@ -149,7 +149,7 @@ configure_make(
     }),
     copts = [
         "-D_POSIX_C_SOURCE=199309L",
-        "-std=gnu++11",
+        "-std=c++17",
     ] + select({
         ":linux_gcc8_armv7_none_musleabi": [
             "-pthread",

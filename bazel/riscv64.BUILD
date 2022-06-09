@@ -71,7 +71,7 @@ filegroup(
     ],
 )
 
-load("@bazel_build_repo//toolchains:gcc_aarch64_toolchain.bzl", "cc_toolchain_config")
+load("@bazel_build_file//toolchains:gcc_aarch64_toolchain.bzl", "cc_toolchain_config")
 
 cc_toolchain_config(
     name = "toolchain_config",

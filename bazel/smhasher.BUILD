@@ -11,7 +11,7 @@ filegroup(
 
 cmake(
     name = "smhasher",
-    build_data = ["@bazel_build_repo//bazel:smhasher_postfix"],
+    build_data = ["@bazel_build_file//bazel:smhasher_postfix"],
     cache_entries = {
         "CMAKE_VERBOSE_MAKEFILE": "ON",
     },

@@ -88,8 +88,8 @@ def deps():
         sha256 = "425fefd8c83f1e7aa373ba0b36cd0e4a100403b2aab7e70d00a717c449fd3279",
         strip_prefix = "aarch64_generic_gcc-11.2.0_musl",
         urls = [
-            "file:///root/src/cpp/toolchains/aarch64_generic_gcc-11.2.0_musl.tar.gz",
-            "https://media.githubusercontent.com/media/xiedeacc/bazel_build_file/master/toolchains/toolchains/aarch64_generic_gcc-11.2.0_musl.tar.gz",
+            #"file:///root/src/cpp/toolchains/aarch64_generic_gcc-11.2.0_musl.tar.gz",
+            "https://raw.githubusercontent.com/xiedeacc/bazel_build_file/master/toolchains/toolchains/aarch64_generic_gcc-11.2.0_musl.tar.gz",
         ],
     )
     ################################################################################################

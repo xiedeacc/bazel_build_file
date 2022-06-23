@@ -87,7 +87,7 @@ cc_toolchain_config(
     compile_flags = [
         "--sysroot=external/gcc11_arm_armv7_none_musleabi",
         "-pthread",
-        "-march=armv8-a",
+        "-march=armv7-a",
         "-mcpu=cortex-a9",
     ],
     compiler = "gcc",
@@ -99,7 +99,7 @@ cc_toolchain_config(
     link_flags = [
         "--sysroot=external/gcc11_arm_armv7_none_musleabi",
         "-pthread",
-        "-march=armv8-a",
+        "-march=armv7-a",
         "-mcpu=cortex-a9",
     ],
     link_libs = [],

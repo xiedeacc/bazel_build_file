@@ -27,46 +27,6 @@ selects.config_setting_group(
 )
 
 selects.config_setting_group(
-    name = "linux_gcc10_armv7_none_eabi",
-    match_all = [
-        "@platforms//cpu:armv7",
-        "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_10",
-        "@bazel_build_file//platforms:eabi",
-    ],
-)
-
-selects.config_setting_group(
-    name = "linux_gcc10_armv7_none_gnueabihf",
-    match_all = [
-        "@platforms//cpu:armv7",
-        "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_10",
-        "@bazel_build_file//platforms:gnueabihf",
-    ],
-)
-
-selects.config_setting_group(
-    name = "linux_gcc10_aarch64_none_elf",
-    match_all = [
-        "@platforms//cpu:aarch64",
-        "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_10",
-        "@bazel_build_file//platforms:elf",
-    ],
-)
-
-selects.config_setting_group(
-    name = "linux_gcc10_aarch64_none_gnueabi",
-    match_all = [
-        "@platforms//cpu:aarch64",
-        "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_10",
-        "@bazel_build_file//platforms:gnueabi",
-    ],
-)
-
-selects.config_setting_group(
     name = "linux_gcc11_armv7_none_eabi",
     match_all = [
         "@platforms//cpu:armv7",
@@ -134,11 +94,6 @@ configure_make(
         "--enable-frame-pointers",
         "--disable-libunwind",
     ] + select({
-        ":linux_gcc8_armv7_none_musleabi": ["--host=armv7l-unknown-linux-musleabihf"],
-        ":linux_gcc10_armv7_none_eabi": ["--host=armv7-none-eabi"],
-        ":linux_gcc10_armv7_none_gnueabihf": ["--host=armv7-none-gnueabihf"],
-        ":linux_gcc10_aarch64_none_elf": ["--host=aarch64-none-elf"],
-        ":linux_gcc10_aarch64_none_gnueabi": ["--host=aarch64-none-gnueabi"],
         ":linux_gcc11_armv7_none_eabi": ["--host=armv7-none-eabi"],
         ":linux_gcc11_armv7_none_gnueabihf": ["--host=armv7-none-gnueabihf"],
         ":linux_gcc11_armv7_none_musleabi": ["--host=armv7l-unknown-linux-musleabihf"],
@@ -155,7 +110,6 @@ configure_make(
             "-pthread",
             "-static",
         ],
-        ":linux_gcc10_armv7_none_eabi": ["-mthumb"],
         ":linux_gcc10_armv7_none_gnueabihf": ["-pthread"],
         ":linux_gcc10_aarch64_none_elf": ["-pthread"],
         ":linux_gcc10_aarch64_none_gnueabi": ["-pthread"],

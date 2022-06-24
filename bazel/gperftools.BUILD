@@ -96,10 +96,6 @@ configure_make(
         "-D_POSIX_C_SOURCE=199309L",
         "-std=c++17",
     ] + select({
-        ":linux_gcc8_armv7_none_musleabi": [
-            "-pthread",
-            "-static",
-        ],
         ":linux_gcc11_armv7_none_eabi": ["-mthumb"],
         ":linux_gcc11_armv7_none_gnueabihf": ["-pthread"],
         ":linux_gcc11_armv7_none_musleabi": [

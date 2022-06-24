@@ -17,16 +17,6 @@ config_setting(
 )
 
 selects.config_setting_group(
-    name = "linux_gcc8_armv7_none_musleabi",
-    match_all = [
-        "@platforms//cpu:armv7",
-        "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_8",
-        "@bazel_build_file//platforms:musleabi",
-    ],
-)
-
-selects.config_setting_group(
     name = "linux_gcc11_armv7_none_eabi",
     match_all = [
         "@platforms//cpu:armv7",
@@ -110,9 +100,6 @@ configure_make(
             "-pthread",
             "-static",
         ],
-        ":linux_gcc10_armv7_none_gnueabihf": ["-pthread"],
-        ":linux_gcc10_aarch64_none_elf": ["-pthread"],
-        ":linux_gcc10_aarch64_none_gnueabi": ["-pthread"],
         ":linux_gcc11_armv7_none_eabi": ["-mthumb"],
         ":linux_gcc11_armv7_none_gnueabihf": ["-pthread"],
         ":linux_gcc11_armv7_none_musleabi": [

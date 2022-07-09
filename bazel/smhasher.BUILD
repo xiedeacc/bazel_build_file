@@ -37,6 +37,7 @@ cmake(
         ":linux_gcc11_aarch64_none_musleabi": ["-march=armv8-a"],
         "//conditions:default": [],
     }),
+    defines = ["-DCMAKE_CROSSCOMPILING"],
     lib_source = ":all",
     linkopts = select({
         ":linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],

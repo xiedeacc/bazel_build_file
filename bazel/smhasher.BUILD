@@ -28,6 +28,7 @@ selects.config_setting_group(
 
 cmake(
     name = "smhasher",
+    build_args = ["-DCMAKE_CROSSCOMPILING"],
     build_data = ["@bazel_build_file//bazel:smhasher_postfix"],
     cache_entries = {
         "CMAKE_VERBOSE_MAKEFILE": "ON",
@@ -37,7 +38,6 @@ cmake(
         ":linux_gcc11_aarch64_none_musleabi": ["-march=armv8-a"],
         "//conditions:default": [],
     }),
-    defines = ["-DCMAKE_CROSSCOMPILING"],
     lib_source = ":all",
     linkopts = select({
         ":linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],

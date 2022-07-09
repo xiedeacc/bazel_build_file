@@ -15,8 +15,6 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:aarch64",
         "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_11",
-        "@bazel_build_file//platforms:musleabi",
     ],
 )
 
@@ -25,8 +23,6 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:armv7",
         "@platforms//os:linux",
-        "@bazel_build_file//platforms:gcc_11",
-        "@bazel_build_file//platforms:musleabi",
     ],
 )
 

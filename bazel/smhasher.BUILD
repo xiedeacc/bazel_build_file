@@ -1,4 +1,5 @@
 load("@rules_foreign_cc//foreign_cc:defs.bzl", "cmake")
+load("@bazel_skylib//lib:selects.bzl", "selects")
 
 filegroup(
     name = "all",
@@ -36,8 +37,8 @@ cmake(
         "CMAKE_VERBOSE_MAKEFILE": "ON",
     },
     copts = select({
-        "linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],
-        "linux_gcc11_aarch64_none_musleabi": ["-march=armv8-a"],
+        ":linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],
+        ":linux_gcc11_aarch64_none_musleabi": ["-march=armv8-a"],
         "//conditions:default": [],
     }),
     lib_source = ":all",

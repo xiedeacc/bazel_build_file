@@ -38,6 +38,11 @@ cmake(
         "//conditions:default": [],
     }),
     lib_source = ":all",
+    linkopts = select({
+        ":linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],
+        ":linux_gcc11_aarch64_none_musleabi": ["-march=armv8-a"],
+        "//conditions:default": [],
+    }),
     out_include_dir = "include",
     out_static_libs = ["libSMHasherSupport.a"],
     #postfix_script = "tree . ; exit 1",

@@ -32,6 +32,7 @@ cmake(
     cache_entries = {
         "CMAKE_VERBOSE_MAKEFILE": "ON",
         "CMAKE_CROSSCOMPILING": "TRUE",
+        "CMAKE_SYSTEM_NAME": "Linux",
     },
     copts = select({
         ":linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],

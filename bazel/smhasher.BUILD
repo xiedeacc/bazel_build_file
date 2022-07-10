@@ -31,9 +31,17 @@ cmake(
     build_data = ["@bazel_build_file//bazel:smhasher_postfix"],
     cache_entries = {
         "CMAKE_VERBOSE_MAKEFILE": "ON",
-        "CMAKE_CROSSCOMPILING": "TRUE",
-        "CMAKE_SYSTEM_NAME": "Linux",
-    },
+    } + select({
+        ":linux_gcc11_armv7_none_musleabi": {
+            "CMAKE_CROSSCOMPILING": "TRUE",
+            "CMAKE_SYSTEM_NAME": "Linux",
+        },
+        ":linux_gcc11_aarch64_none_musleabi": {
+            "CMAKE_CROSSCOMPILING": "TRUE",
+            "CMAKE_SYSTEM_NAME": "Linux",
+        },
+        "//conditions:default": {},
+    }),
     copts = select({
         ":linux_gcc11_armv7_none_musleabi": ["-march=armv7-a"],
         ":linux_gcc11_aarch64_none_musleabi": ["-march=armv8-a"],

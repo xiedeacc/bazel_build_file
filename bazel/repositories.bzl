@@ -61,7 +61,7 @@ def deps():
     http_archive(
         name = "gcc11_arm_armv7_none_musleabi",
         build_file = "@bazel_build_file//bazel:gcc_arm_armv7_none_musleabi.BUILD",
-        sha256 = "8d68b973b77c2d18cb347fcfe99f5aab94ef5faf0f685ade12686a4210674011",
+        sha256 = "00292c4e8f4ce9d6fb3e04a836efc166c360c2b3cea3063743e501af74fd6a38",
         strip_prefix = "arm_generic_gcc-11.2.0_musl",
         urls = [
             #"file:///root/src/cpp/toolchains/arm_generic_gcc-11.2.0_musl.tar.gz",

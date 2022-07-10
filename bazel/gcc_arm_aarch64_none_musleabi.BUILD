@@ -86,7 +86,7 @@ cc_toolchain_config(
     c_version = "c99",
     compile_flags = [
         "--sysroot=external/gcc11_arm_aarch64_none_musleabi",
-        "-tune=cortex-a72.cortex-a53",
+        "-mtune=cortex-a72.cortex-a53",
         "-march=armv8-a",
         "-pthread",
     ],
@@ -98,7 +98,7 @@ cc_toolchain_config(
     dbg_compile_flags = [],
     link_flags = [
         "--sysroot=external/gcc11_arm_aarch64_none_musleabi",
-        "-tune=cortex-a72.cortex-a53",
+        "-mtune=cortex-a72.cortex-a53",
         "-march=armv8-a",
         "-pthread",
     ],

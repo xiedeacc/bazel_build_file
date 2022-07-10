@@ -21,6 +21,8 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:armv7",
         "@platforms//os:linux",
+        "@bazel_build_file//platforms:gcc_11",
+        "@bazel_build_file//platforms:eabi",
     ],
 )
 
@@ -29,6 +31,8 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:armv7",
         "@platforms//os:linux",
+        "@bazel_build_file//platforms:gcc_11",
+        "@bazel_build_file//platforms:gnueabihf",
     ],
 )
 
@@ -37,6 +41,8 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:armv7",
         "@platforms//os:linux",
+        "@bazel_build_file//platforms:gcc_11",
+        "@bazel_build_file//platforms:musleabi",
     ],
 )
 
@@ -45,6 +51,8 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:aarch64",
         "@platforms//os:linux",
+        "@bazel_build_file//platforms:gcc_11",
+        "@bazel_build_file//platforms:elf",
     ],
 )
 
@@ -53,6 +61,8 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:aarch64",
         "@platforms//os:linux",
+        "@bazel_build_file//platforms:gcc_11",
+        "@bazel_build_file//platforms:gnueabi",
     ],
 )
 
@@ -61,6 +71,8 @@ selects.config_setting_group(
     match_all = [
         "@platforms//cpu:aarch64",
         "@platforms//os:linux",
+        "@bazel_build_file//platforms:gcc_11",
+        "@bazel_build_file//platforms:musleabi",
     ],
 )
 

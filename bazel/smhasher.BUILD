@@ -29,9 +29,7 @@ selects.config_setting_group(
 cmake(
     name = "smhasher",
     build_data = ["@bazel_build_file//bazel:smhasher_postfix"],
-    cache_entries = {
-        "CMAKE_VERBOSE_MAKEFILE": "ON",
-    } + select({
+    cache_entries = select({
         ":linux_gcc11_armv7_none_musleabi": {
             "CMAKE_CROSSCOMPILING": "TRUE",
             "CMAKE_SYSTEM_NAME": "Linux",

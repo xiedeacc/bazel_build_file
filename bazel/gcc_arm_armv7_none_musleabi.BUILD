@@ -91,7 +91,7 @@ cc_toolchain_config(
         "-mtune=cortex-a9",
     ],
     compiler = "gcc",
-    cpp_version = "c++11",
+    cpp_version = "c++17",
     cpu = "armv7a",
     cxx_builtin_include_directories = [
     ],
